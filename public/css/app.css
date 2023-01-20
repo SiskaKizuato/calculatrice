@@ -1,0 +1,122 @@
+/* border */
+
+.borderT{
+    border: 1px solid firebrick;
+}
+
+.borderT2{
+    border: 3px solid firebrick;
+}
+
+.borderTB{
+    border: 1px solid white;;
+}
+
+/* flex */
+.flex{
+    display: flex;
+}
+
+.direction{
+    flex-direction: column;
+}
+
+.justify{
+    justify-content: center;
+}
+
+.align{
+    align-items: center;
+}
+
+.text-align{
+    text-align: center;
+}
+
+/* colors */
+.bgBlack{
+    background-color: black;
+}
+
+.bgWhite{
+    background-color: white;
+}
+
+.fontClrR{
+    color: firebrick;
+}
+
+.fontClrW{
+    color: white;
+}
+
+/* font */
+.fs-big{
+    font-size: 30px;
+    font-weight: bold;
+}
+.fs-regular{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+
+
+/* elements par ordre de profondeur*/
+/* body */
+body{
+    margin: 0;
+    padding: 40px;
+}
+.container{
+    width: 350px;
+    height: 400px;
+    padding: 15px;
+}
+
+.containBtnAndScreen{
+    width: 100%;
+    height: 100%;
+}
+
+.row{
+    height: 15%;
+    margin-bottom: 7px;
+    display: flex;
+    gap: 13px;
+}
+
+.col{
+    height: 20%;
+    width:20%;
+    border:1px solid white
+}
+
+.row5{
+    height: 57px;
+    border: 1px solid white;
+}
+
+p{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.input{
+    width: 100%;
+    height: 58px;
+    background-color: rgba(178, 34, 34, 0.765);
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: none;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+}
