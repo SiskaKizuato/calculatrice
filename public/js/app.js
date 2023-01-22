@@ -128,6 +128,7 @@ rows[0].append(input)
 input.className = "input"
 console.log(body);
 
+// creation bouton clear fonctionnel
 let pS = document.querySelectorAll("p")
 p13.addEventListener("click", () => {
     console.log(input.value);
@@ -135,12 +136,13 @@ p13.addEventListener("click", () => {
     console.log("input clear");
 })
 
-let pSWithoutClear = Array.prototype.slice.call(pS, 0, 12).concat(Array.prototype.slice.call(pS, 13));
+// forEach pour que tous les boutons soient fonctionnels, sauf C et =
+let pSWithoutClear = Array.prototype.slice.call(pS, 0, 12).concat(Array.prototype.slice.call(pS, 13,16));
 pSWithoutClear.forEach(function (p) {
     p.addEventListener("click", function () {
         input.value = input.value + p.innerText;
     });
 });
 
-            
+
 
