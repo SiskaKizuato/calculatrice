@@ -128,6 +128,18 @@ rows[0].append(input)
 input.className = "input"
 console.log(body);
 
+// empeche l'utilisateur d'entrer autre chose que chiffre et operateur
+input.addEventListener("keypress", function (event) {
+    // Récupération de la valeur de la touche pressée
+    let key = event.key;
+
+    // Vérification si la valeur de la touche pressée est valide (chiffres ou opérateurs mathématiques)
+    if (!/[\d+\-*/\.]/.test(key)) {
+        // Si la valeur de la touche pressée n'est pas valide, annuler l'événement
+        event.preventDefault();
+    }
+});
+
 // creation bouton clear fonctionnel
 let pS = document.querySelectorAll("p")
 p13.addEventListener("click", () => {
@@ -143,7 +155,7 @@ pSWithoutClear.forEach(function (p) {
     });
 });
 
-// rend le bouton egal fonctionne et  affiche le reesultat dans l'input
+// rend le bouton egal fonctionnel et  affiche le reesultat dans l'input
 p17.addEventListener("click", function () {
     // Récupération de la valeur de l'input
     let valeurInput = input.value;
@@ -154,3 +166,4 @@ p17.addEventListener("click", function () {
     // Affichage du résultat sur l'input
     input.value = resultat;
 });
+
