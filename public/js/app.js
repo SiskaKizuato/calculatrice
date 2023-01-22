@@ -127,3 +127,10 @@ let input = document.createElement("input")
 rows[0].append(input)
 input.className = "input"
 console.log(body);
+
+let pS = document.querySelectorAll("p")
+p13.addEventListener("click", () => {
+    console.log(input.value);
+    input.value = ""
+    console.log("input clear");
+})
