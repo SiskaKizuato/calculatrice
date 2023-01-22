@@ -8,9 +8,8 @@
     border: 3px solid firebrick;
 }
 
-.borderTB{
-    border: 1px solid white;;
-}
+
+
 
 /* flex */
 .flex{
@@ -90,13 +89,12 @@ body{
 .col{
     height: 20%;
     width:20%;
-    border:1px solid white
 }
 
 .row5{
     height: 57px;
-    border: 1px solid white;
 }
+
 
 p{  
     display: flex;
@@ -106,9 +104,17 @@ p{
     margin: 0;
     height: 100%;
     width: 100%;
+    border: 1px solid white;
+    transition: 0.3s;
 }
 p:hover{
     cursor: pointer;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+p:active{
+    border: 2px solid red;
+    border-radius: 17px;
 }
 .input{
     width: 100%;
