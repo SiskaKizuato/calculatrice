@@ -134,3 +134,13 @@ p13.addEventListener("click", () => {
     input.value = ""
     console.log("input clear");
 })
+
+let pSWithoutClear = Array.prototype.slice.call(pS, 0, 12).concat(Array.prototype.slice.call(pS, 13));
+pSWithoutClear.forEach(function (p) {
+    p.addEventListener("click", function () {
+        input.value = input.value + p.innerText;
+    });
+});
+
+            
+
