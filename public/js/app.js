@@ -131,7 +131,6 @@ console.log(body);
 // creation bouton clear fonctionnel
 let pS = document.querySelectorAll("p")
 p13.addEventListener("click", () => {
-    console.log(input.value);
     input.value = ""
     console.log("input clear");
 })
@@ -144,5 +143,14 @@ pSWithoutClear.forEach(function (p) {
     });
 });
 
+// rend le bouton egal fonctionne et  affiche le reesultat dans l'input
+p17.addEventListener("click", function () {
+    // Récupération de la valeur de l'input
+    let valeurInput = input.value;
 
+    // Utilisation de eval() pour calculer le résultat de l'expression mathématique
+    let resultat = eval(valeurInput);
 
+    // Affichage du résultat sur l'input
+    input.value = resultat;
+});
