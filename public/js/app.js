@@ -129,6 +129,8 @@ input.className = "input"
 console.log(body);
 
 // empeche l'utilisateur d'entrer autre chose que chiffre et operateur
+let verif = input.value;
+
 input.addEventListener("keypress", function (event) {
     // Récupération de la valeur de la touche pressée
     let key = event.key;
@@ -167,3 +169,11 @@ p17.addEventListener("click", function () {
     input.value = resultat;
 });
 
+// Permet a lutilisateur dafficher le resultat en appuyant sur la touche egal de son clavier
+window.addEventListener("keyup", function(event) {
+    if (event.key === "=") {
+        let valeurInput = input.value;
+        let resultat = eval(valeurInput);
+        input.value = resultat;
+    }
+});
