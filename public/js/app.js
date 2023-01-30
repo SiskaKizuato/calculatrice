@@ -177,3 +177,36 @@ window.addEventListener("keyup", function(event) {
         input.value = resultat;
     }
 });
+
+// creation modes
+const barre = document.getElementsByClassName('barre')[0]
+
+const boule = document.getElementsByClassName('boule')[0]
+
+const paragraphs = document.getElementsByTagName('p');
+
+const containerT = document.getElementsByClassName('borderT')[0]
+
+let modeBlanc = true;
+
+boule.addEventListener('click', () => {
+    modeBlanc = !modeBlanc;
+
+    document.body.style.backgroundColor = modeBlanc ? 'black' : 'white';
+    barre.style.backgroundColor = modeBlanc ? 'firebrick' : 'rgb(135, 206, 235)'
+    containerT.style.borderColor = modeBlanc ? 'firebrick' : 'rgb(135, 206, 235)'
+    containerT.style.borderWidth = modeBlanc ? '1px' : '1.5px'
+    barre.style.borderColor = modeBlanc ? 'firebrick' : 'black'
+    barre.style.justifyContent = modeBlanc ? 'right' : 'left'
+    boule.style.right = modeBlanc ? '-1px' : '1px'
+    input.style.backgroundColor = modeBlanc ? 'rgba(178, 34, 34, 0.765)' : 'rgb(135, 206, 235)'
+    input.style.boxShadow = modeBlanc ? '0 0 0 1px white' : '0 0 0 1px black';
+
+    for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.borderColor = modeBlanc ? 'white' : 'black'
+        paragraphs[i].style.borderWidth = modeBlanc ? '1px' : '1.5px'
+        paragraphs[i].style.color = modeBlanc ? 'firebrick' : 'black'
+        paragraphs[i].style.backgroundColor = modeBlanc ? 'black' : 'rgb(135, 206, 235)'
+    }
+    boule.style.float = modeBlanc ? 'right' : 'left'
+});
